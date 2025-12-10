@@ -13,7 +13,7 @@ if uploaded_file:
 
     if text.strip() != "":
         st.success("Extracted using pdfplumber (text-based PDF).")
-        st.text(text[:1500])
+        st.text(text)
 
     else:
         st.warning("No text found — attempting OCR (scanned PDF).")
@@ -27,4 +27,4 @@ if uploaded_file:
             st.error("OCR failed. The PDF might be corrupted.")
         else:
             st.success("Text extracted using OCR!")
-            st.text(ocr_text[:1500])
+            st.text(ocr_text)
